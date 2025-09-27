@@ -262,7 +262,7 @@ main .main-center:after {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  top: 600px;
+  top: 550px;
 }
 main .main-center .mc-img {
   height: 50px;
