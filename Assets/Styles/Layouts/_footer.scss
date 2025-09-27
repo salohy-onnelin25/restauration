@@ -1,0 +1,113 @@
+footer {
+    background: $black1;
+    min-height: 100vh;
+    .footer-top {
+        min-height: 70vh;
+        padding-top: 100px;
+        position: relative;
+        &:after {
+            content: "";
+            position: absolute;
+            height: 500px;
+            width: 100%;
+            @include background-img("../Imgs/gmap.jpg", cover, center, no-repeat);
+            left: 50%;
+            transform: translate(-50%, -50%);
+            bottom: -250px;
+        }
+        .description {
+            background: $white;
+            border-radius: 10px;
+            min-height: 300px;
+            width: 50%;
+            margin: 0 auto;
+            @include flex-center(column);
+            padding: 0 20px;
+            text-align: center;
+            position: relative;
+            z-index: 1000;
+            &::after {
+                content: "";
+                position: absolute;
+                top: -50px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                overflow: hidden;
+                border: 5px solid $white;
+                @include background-img(
+                    "../Imgs/469218025_2867263606757805_2181642583290175945_n.jpg",
+                    contain,
+                    center,
+                    no-repeat
+                );
+            }
+        }
+    }
+    .footer-bottom {
+        min-height: 30vh;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        .bottom-left {
+            background: $black;
+            padding-left: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            p {
+                color: $gray;
+            }
+            @media (max-width: 1300px) {
+                display: none;
+            }
+        }
+        .bottom-right {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 20px;
+            border-top: 1px dotted $black;
+            form {
+                display: grid;
+                grid-template-rows: 1fr;
+                label {
+                    margin-bottom: 10px;
+                    font-weight: bold;
+                    font-size: clamp(1rem, 1.2vw, 1.4rem);
+                }
+                input {
+                    width: 50%;
+                    padding: 10px 10px;
+                    background: none;
+                }
+            }
+
+            .submit {
+                margin: 20px 0;
+                input {
+                    padding: 5px 10px;
+                    cursor: pointer;
+                    border-radius: 5px;
+                    transition: 0.3s ease;
+                    &:hover {
+                        transform: scale(1.05);
+                        background: $brown;
+                        color: $black;
+                    }
+                }
+            }
+            .bt-social {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                gap: 20px;
+                .social {
+                    display: flex;
+                    gap: 20px;
+                }
+            }
+        }
+    }
+}

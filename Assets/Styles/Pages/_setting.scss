@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: Allura;
+    src: url(../Fonts/Allura-Regular.ttf);
+}
+$font1: Allura, sans-serif;
+
+@font-face {
+    font-family: Poppins;
+    src: url(../Fonts/Poppins-Medium.ttf);
+}
+$font2: Poppins, serif;
+
+@font-face {
+    font-family: Roboto;
+    src: url(../Fonts/Roboto-Light.ttf);
+}
+$font3: Roboto, serif;
+
+$brown: rgb(201, 161, 75);
+$brown1: rgb(87, 60, 9);
+$white: white;
+$black: black;
+$black1: rgb(49, 48, 48);
+$gray: rgb(173, 169, 169);
+
+@mixin flex-center($direction: row) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flex($direction: row, $justify: center, $align: center) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin background-img($url, $size: cover, $position: center, $repeat: no-repeat) {
+    background-image: url(#{$url});
+    background-size: $size;
+    background-position: $position;
+    background-repeat: $repeat;
+}
+
+body {
+    font-family: $font2;
+    h2 {
+        font-family: $font1;
+        color: $brown;
+        font-size: clamp(1.5rem, 2vw, 2.5rem);
+    }
+    h3 {
+        font-size: clamp(1rem, 1.2vw, 1.4rem);
+    }
+    p {
+        font-size: clamp(0.5rem, 1vw, 1.5rem);
+    }
+}
+
+a {
+    color: $white;
+    cursor: pointer;
+}
+i {
+    font-size: clamp(1rem, 1.5vw, 2rem);
+    transition: 0.3s ease;
+    &:hover {
+        transform: scale(2.05);
+    }
+}
