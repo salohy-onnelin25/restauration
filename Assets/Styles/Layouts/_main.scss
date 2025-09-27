@@ -62,7 +62,8 @@ main {
             margin: 20px 0;
         }
         nav {
-            width: 80%;
+            width: 95%;
+            
             ul {
                 @include flex(row, space-evenly, center);
 
