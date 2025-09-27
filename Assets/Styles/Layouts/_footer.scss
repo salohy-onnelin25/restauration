@@ -8,7 +8,7 @@ footer {
         &:after {
             content: "";
             position: absolute;
-            height: 400px;
+            height: 500px;
             width: 100%;
             @include background-img("../Imgs/gmap.jpg", cover, center, no-repeat);
             left: 50%;

@@ -714,7 +714,7 @@ footer .footer-top {
 footer .footer-top:after {
   content: "";
   position: absolute;
-  height: 400px;
+  height: 500px;
   width: 100%;
   background-image: url(../Imgs/gmap.jpg);
   background-size: cover;
