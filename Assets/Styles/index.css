@@ -84,9 +84,10 @@ header .header-top {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 40px;
   }
 }
 header .header-top h1 {
@@ -126,7 +127,7 @@ header .header-top .social-top {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  gap: 20px;
+  gap: 10px;
   width: 8%;
 }
 header .header-bottom {
@@ -234,7 +235,8 @@ main .main-top .mt-right {
   }
 }
 main .main-center {
-  min-height: 100vh;
+  min-height: 900px;
+  padding-top: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -417,7 +419,7 @@ main .main-center .main-table .mt-img10 {
   background-repeat: no-repeat;
 }
 main .main-bottom {
-  min-height: 100vh;
+  min-height: 1100px;
 }
 main .main-bottom .mbt-img {
   height: 50px;
@@ -429,7 +431,6 @@ main .main-bottom .mbt-img {
   margin: 20px 0;
 }
 main .main-bottom .mb-top {
-  min-height: 50vh;
   background: black;
   display: grid;
   grid-template-columns: 30% 70%;
@@ -533,7 +534,6 @@ main .main-bottom .mb-top .mbt-right .mbt-btn button:hover {
   color: black;
 }
 main .mb-bottom {
-  min-height: 50vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -704,17 +704,16 @@ main .mb-bottom .mbb-table .Table-right .right-comment .comment-bottom p {
 
 footer {
   background: rgb(49, 48, 48);
-  min-height: 100vh;
+  min-height: 600px;
 }
 footer .footer-top {
-  min-height: 70vh;
-  padding-top: 100px;
+  padding-bottom: 200px;
   position: relative;
 }
 footer .footer-top:after {
   content: "";
   position: absolute;
-  height: 500px;
+  height: 400px;
   width: 100%;
   background-image: url(../Imgs/gmap.jpg);
   background-size: cover;
@@ -723,7 +722,7 @@ footer .footer-top:after {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  bottom: -250px;
+  bottom: -190px;
 }
 footer .footer-top .description {
   background: white;
@@ -767,7 +766,6 @@ footer .footer-top .description::after {
   background-repeat: no-repeat;
 }
 footer .footer-bottom {
-  min-height: 30vh;
   display: grid;
   grid-template-columns: 50% 50%;
 }
@@ -817,7 +815,7 @@ footer .footer-bottom .bottom-right form label {
   font-size: clamp(1rem, 1.2vw, 1.4rem);
 }
 footer .footer-bottom .bottom-right form input {
-  width: 50%;
+  width: 200px;
   padding: 10px 10px;
   background: none;
 }
@@ -849,6 +847,11 @@ footer .footer-bottom .bottom-right .bt-social {
       -ms-flex-pack: start;
           justify-content: flex-start;
   gap: 20px;
+}
+@media (max-width: 500px) {
+  footer .footer-bottom .bottom-right .bt-social h3 {
+    display: none;
+  }
 }
 footer .footer-bottom .bottom-right .bt-social .social {
   display: -webkit-box;

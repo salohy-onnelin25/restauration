@@ -16,7 +16,8 @@ header {
         @media (max-width: 1300px) {
             display: flex;
             flex-direction: row;
-            justify-content: space-evenly;
+            justify-content: center; 
+            gap: 40px;
         }
         h1 {
             font-size: clamp(2rem, 2.5vw, 3rem);
@@ -39,7 +40,7 @@ header {
         .social-top {
             display: flex;
             flex-direction: row;
-            gap: 20px;
+            gap: 10px;
             width: 8%;
         }
     }

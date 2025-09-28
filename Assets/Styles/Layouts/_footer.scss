@@ -1,19 +1,17 @@
 footer {
     background: $black1;
-    min-height: 100vh;
-    .footer-top {
-        min-height: 70vh;
-        padding-top: 100px;
+    min-height: 600px;
+    .footer-top {padding-bottom: 200px;
         position: relative;
         &:after {
             content: "";
             position: absolute;
-            height: 500px;
+            height: 400px;
             width: 100%;
             @include background-img("../Imgs/gmap.jpg", cover, center, no-repeat);
             left: 50%;
             transform: translate(-50%, -50%);
-            bottom: -250px;
+            bottom: -190px;
         }
         .description {
             background: $white;
@@ -47,7 +45,6 @@ footer {
         }
     }
     .footer-bottom {
-        min-height: 30vh;
         display: grid;
         grid-template-columns: 50% 50%;
         .bottom-left {
@@ -78,7 +75,7 @@ footer {
                     font-size: clamp(1rem, 1.2vw, 1.4rem);
                 }
                 input {
-                    width: 50%;
+                    width: 200px;
                     padding: 10px 10px;
                     background: none;
                 }
@@ -103,6 +100,11 @@ footer {
                 flex-direction: row;
                 justify-content: flex-start;
                 gap: 20px;
+                h3 {
+                    @media (max-width: 500px) {
+                        display: none;
+                    }
+                }
                 .social {
                     display: flex;
                     gap: 20px;
